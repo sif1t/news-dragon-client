@@ -4,6 +4,7 @@ import Footer from '../pages/shared/Footer/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../pages/shared/leftNav/leftNav';
 import RightNav from '../pages/shared/rightNav/rightNav';
+import { Outlet } from 'react-router-dom';
 
 
 const Main = () => {
@@ -11,12 +12,12 @@ const Main = () => {
         <div>
             <Header></Header>
             <Container>
-                <Row>
+                <Row className='flex-row justify-content-around'>
                     <Col lg={3}>
                        <LeftNav></LeftNav>
                     </Col>
-                    <Col lg={3}>
-                        <h2>Main Content coming</h2>
+                    <Col lg={6}>
+                       <Outlet></Outlet>
                     </Col>
                     <Col lg={3}>
                         <RightNav></RightNav>
