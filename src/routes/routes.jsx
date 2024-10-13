@@ -20,6 +20,9 @@ const router = createBrowserRouter([
             element: <Category></Category>,
             loader: ({params}) => fetch (`http://localhost:5000/categories/${params.id}`)
         },
+      ]
+    },
+        
         {
            path: "news",
            element: <NewsLayout></NewsLayout>,
@@ -30,8 +33,7 @@ const router = createBrowserRouter([
               }
            ]
         }
-      ]
-    },
+     
   ]);
 
 export default router; 
