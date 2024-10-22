@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { createContext } from 'react';
+import { getAuth } from 'firebase/auth';
+import app from '../firebase/firebase.config';
 
-const AuthProvider = () => {
+export const AuthContext = createContext(null);
+
+
+const auth = getAuth(app);
+const AuthProvider = ({children}) => {
+    const user = {displayName: 'Test User'};
+    const authInfo  = {
+        user
+    };
+
     return (
-        <div>
-            
-        </div>
+         <AuthContext.Provider value={authInfo}>
+              {children}
+         </AuthContext.Provider>
     );
 };
-
-export default AuthProvider;
+ 
+export default AuthProvider;   
+ 
