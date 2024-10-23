@@ -1,15 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import logo from '../../../assets/logo.png';
 import moment from 'moment';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import Marquee from "react-fast-marquee";
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
-import { FaUserCircle } from 'react-icons/fa';
 
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
+
 
   return (
     <Container className='mt-4'>
@@ -33,32 +30,7 @@ const Header = () => {
           দেশের বিভিন্ন প্রকল্পের আওতায় কত গাড়ি আছে সেই হিসাব নেয়ার সিদ্ধান্ত হয়েছে বলেও সংবাদ সম্মেলনে জানান শিক্ষা ও পরিকল্পনা উপদেষ্টা।</Marquee>
 
       </div>
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-              <Nav.Link href="#features">
-                <Link to="/">Home</Link>
-              </Nav.Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
-            </Nav>
-            <Nav>
-              {user && <Nav.Link href="#deets">
-                <FaUserCircle style={{fontSize:'2rem'}} /></Nav.Link>}
-              <Nav.Link eventKey={2} href="#memes">
-                {user ?
-                <Button variant="secondary">Logout</Button>:
-                 <link to='/login'>
-                   <Button variant="danger">Login</Button>
-                 </link>
-                }
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+  
     </Container>
 
   );

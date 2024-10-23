@@ -3,14 +3,16 @@ import Header from '../pages/shared/Header/Header';
 import Footer from '../pages/shared/Footer/Footer';
 import { Col, Container, Row } from 'react-bootstrap';
 import LeftNav from '../pages/shared/leftNav/leftNav';
-import RightNav from '../pages/shared/rightNav/rightNav';
+import RightNav from '../pages/shared/RightNav/RightNav';
 import { Outlet } from 'react-router-dom';
+import NavigationBar from '../pages/shared/NavigationBar/NavigationBar';
 
 
 const Main = () => {
     return (
         <div>
             <Header></Header>
+            <NavigationBar></NavigationBar>
             <Container>
                 <Row className='flex-row justify-content-around'>
                     <Col lg={3}>
