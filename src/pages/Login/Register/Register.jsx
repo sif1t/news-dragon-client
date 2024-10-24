@@ -15,6 +15,14 @@ const Register = () => {
            const password = form.password.value; 
 
            console.log (name, photo, email, password);
+           creteUser(email, password)
+            .then (result => {
+                 const cratedUser = result.user;
+                    console.log (cratedUser);
+            })
+            .catch (error => {
+                console.log (error);
+            });
     }
 
     return (
