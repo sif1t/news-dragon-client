@@ -1,12 +1,15 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import Main from "../layouts/Main"; 
 import NewsLayout from "../layouts/NewsLayout";
-import News from "../pages/News/News/News";
 import Category from "../pages/Home/Category/Category";
 import LoginLayout from "../layouts/LoginLayout";
 import Register from "../pages/Login/Register/Register";
 import Login from "../pages/Login/Login/Login";
 import PrivateRoute from "./PrivateRoute";
+import News from "../pages/News/News/News";
+import Terms from "../pages/shared/Terms/Terms";
+
+
 
 const router = createBrowserRouter([
      {
@@ -24,7 +27,11 @@ const router = createBrowserRouter([
                  {
                   path: "register",
                   element: <Register></Register>
-                 }
+                 },
+                  {
+                    path: "terms",
+                    element: <Terms></Terms>
+                  }
               ]
         },
     {
