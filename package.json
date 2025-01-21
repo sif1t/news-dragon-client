@@ -12,7 +12,7 @@
   "dependencies": {
     "@smastrom/react-rating": "^1.5.0",
     "bootstrap": "^5.3.3",
-    "firebase": "^10.13.1",
+    "firebase": "^11.2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "moment": "^2.30.1",
